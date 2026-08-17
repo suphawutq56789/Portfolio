@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta name="description" content="Suphawut Thawinutchokaudom — AI / Machine Learning Portfolio">
   <title>Suphawut Thawinutchokaudom | AI Portfolio</title>
 
   <style>
@@ -28,9 +28,7 @@
       margin: auto;
     }
 
-    /* =========================
-       NAVBAR
-    ========================= */
+    /* NAVBAR */
 
     nav {
       display: flex;
@@ -60,9 +58,7 @@
       color: #ffffff;
     }
 
-    /* =========================
-       HERO
-    ========================= */
+    /* HERO */
 
     .hero {
       min-height: 650px;
@@ -91,6 +87,7 @@
     }
 
     h1 span {
+      display: block;
       color: #6ba8ff;
     }
 
@@ -162,9 +159,7 @@
       font-weight: 700;
     }
 
-    /* =========================
-       SECTION
-    ========================= */
+    /* SECTIONS */
 
     section {
       padding: 70px 0;
@@ -185,13 +180,51 @@
 
     .section-description {
       color: #a9b8cc;
-      max-width: 800px;
+      max-width: 850px;
       margin-bottom: 35px;
     }
 
-    /* =========================
-       PROJECT CARD
-    ========================= */
+    /* ABOUT */
+
+    .about-card {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 22px;
+      background: #101d31;
+      border: 1px solid #273a55;
+      border-radius: 24px;
+      padding: 30px;
+    }
+
+    .about-card h3 {
+      margin: 0 0 10px;
+      font-size: 26px;
+    }
+
+    .about-card p {
+      color: #a9b8cc;
+      margin: 0 0 14px;
+    }
+
+    .about-points {
+      display: grid;
+      gap: 12px;
+    }
+
+    .about-point {
+      background: #0c192a;
+      border: 1px solid #273a55;
+      border-radius: 14px;
+      padding: 14px 16px;
+    }
+
+    .about-point strong {
+      display: block;
+      color: #72e0c1;
+      margin-bottom: 2px;
+    }
+
+    /* PROJECT */
 
     .project {
       background: #101d31;
@@ -260,9 +293,7 @@
       margin: 5px 0 25px;
     }
 
-    /* =========================
-       APPLICATIONS
-    ========================= */
+    /* APPLICATIONS */
 
     .app-grid {
       display: grid;
@@ -286,9 +317,7 @@
       color: #a9b8cc;
     }
 
-    /* =========================
-       FOOTER
-    ========================= */
+    /* FOOTER */
 
     footer {
       border-top: 1px solid #273a55;
@@ -300,7 +329,8 @@
 
     @media (max-width: 850px) {
 
-      .hero {
+      .hero,
+      .about-card {
         grid-template-columns: 1fr;
       }
 
@@ -321,16 +351,14 @@
       }
     }
   </style>
-
 </head>
+
 
 <body>
 
 <div class="container">
 
-  <!-- =========================
-       NAVIGATION
-  ========================= -->
+  <!-- NAVIGATION -->
 
   <nav>
 
@@ -339,6 +367,7 @@
     </div>
 
     <div class="nav-links">
+      <a href="#about">About</a>
       <a href="#research">Research</a>
       <a href="#applications">Applications</a>
       <a href="#contact">Contact</a>
@@ -347,9 +376,7 @@
   </nav>
 
 
-  <!-- =========================
-       HERO
-  ========================= -->
+  <!-- HERO -->
 
   <header class="hero">
 
@@ -431,9 +458,110 @@
   </header>
 
 
-  <!-- =========================
-       RESEARCH
-  ========================= -->
+  <!-- ABOUT ME -->
+
+  <section id="about">
+
+    <div class="section-label">
+      ABOUT ME
+    </div>
+
+    <h2 class="section-title">
+      Civil Engineering Background.
+      AI Engineering Direction.
+    </h2>
+
+
+    <div class="about-card">
+
+
+      <div>
+
+        <h3>
+          Engineering + Artificial Intelligence
+        </h3>
+
+        <p>
+          I started working with Computer Vision during my B.Eng.
+          capstone project, developing YOLO-based pavement damage
+          detection models and presenting the project at
+          KMUTT Project Day 2024.
+        </p>
+
+        <p>
+          I later continued AI research at the M.Eng. level,
+          focusing on Ground Penetrating Radar (GPR) cavity
+          detection — progressing from 2D single-view object
+          detection to multi-view deep learning with TriView-YOLO.
+        </p>
+
+        <p>
+          My current focus is not only model development,
+          but also building usable AI applications and
+          reproducible deployment workflows.
+        </p>
+
+      </div>
+
+
+      <div class="about-points">
+
+        <div class="about-point">
+
+          <strong>
+            Computer Vision
+          </strong>
+
+          YOLO-based object detection for pavement
+          and GPR applications.
+
+        </div>
+
+
+        <div class="about-point">
+
+          <strong>
+            AI Research
+          </strong>
+
+          Single-view and multi-view deep learning
+          for subsurface cavity detection.
+
+        </div>
+
+
+        <div class="about-point">
+
+          <strong>
+            Deployment
+          </strong>
+
+          Hugging Face Spaces, Gradio,
+          Docker and Docker Compose.
+
+        </div>
+
+
+        <div class="about-point">
+
+          <strong>
+            AI Automation
+          </strong>
+
+          Multi-agent workflows, LLM tools
+          and API integration using n8n.
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- RESEARCH -->
 
   <section id="research">
 
@@ -446,114 +574,193 @@
     </h2>
 
     <p class="section-description">
-      My AI development started during my B.Eng. capstone project
-      with pavement object detection and continued into M.Eng.
-      research on GPR cavity detection, multi-view deep learning,
+
+      My AI development started during my B.Eng.
+      capstone project with pavement object detection
+      and continued into M.Eng. research on GPR cavity
+      detection, multi-view deep learning,
       and deployable AI systems.
+
     </p>
 
 
-    <!-- ========================================
-         00 B.ENG.
-    ========================================= -->
+
+    <!-- =========================================
+         00 B.ENG PROJECT
+    ========================================== -->
 
     <article class="project">
 
       <div class="project-number">
-        00 · B.Eng. Capstone Project · KMUTT Project Day 2024
+
+        00 · B.Eng. Capstone Project
+        · KMUTT Project Day 2024
+
       </div>
+
 
       <h3>
+
         Pavement Damage Detection with YOLO
+
       </h3>
 
+
       <div class="subtitle">
-        Real-time object detection for automated pavement damage assessment.
+
+        Real-time object detection for
+        automated pavement damage assessment.
+
       </div>
+
 
       <ul>
 
         <li>
-          Developed pavement damage detection using
-          YOLOv8, YOLOv9 and YOLOv9-GELAN.
+
+          Developed pavement damage detection
+          using YOLOv8, YOLOv9 and YOLOv9-GELAN.
+
         </li>
 
+
         <li>
+
           Classified pavement deterioration into
           <strong>10 damage classes</strong>.
+
         </li>
 
-        <li>
-          Used road imagery from multiple countries,
-          including Thailand, Japan, India, Czech Republic,
-          Norway and the United States.
-        </li>
 
         <li>
-          Evaluated Normal, Background and Data Augmentation
-          training configurations.
+
+          Used road imagery from multiple countries
+          including Thailand, Japan, India,
+          Czech Republic, Norway and the United States.
+
         </li>
 
-        <li>
-          Compared 21 model / dataset configurations using
-          mAP, Precision, Recall and F1-score.
-        </li>
 
         <li>
+
+          Evaluated Normal, Background and
+          Data Augmentation training configurations.
+
+        </li>
+
+
+        <li>
+
+          Compared 21 model / dataset configurations
+          using mAP, Precision, Recall and F1-score.
+
+        </li>
+
+
+        <li>
+
           Presented the project at
           <strong>KMUTT Project Day 2024</strong>.
+
         </li>
 
       </ul>
 
 
+
       <div class="metrics">
 
-        <div class="metric">
-          <strong>10</strong>
-          <span>Damage Classes</span>
-        </div>
 
         <div class="metric">
-          <strong>21</strong>
-          <span>Model Settings</span>
+
+          <strong>
+            10
+          </strong>
+
+          <span>
+            Damage Classes
+          </span>
+
         </div>
 
-        <div class="metric">
-          <strong>0.598</strong>
-          <span>Best mAP</span>
-        </div>
 
         <div class="metric">
-          <strong>2024</strong>
-          <span>KMUTT Project Day</span>
+
+          <strong>
+            21
+          </strong>
+
+          <span>
+            Model Settings
+          </span>
+
         </div>
+
+
+        <div class="metric">
+
+          <strong>
+            0.598
+          </strong>
+
+          <span>
+            Best mAP
+          </span>
+
+        </div>
+
+
+        <div class="metric">
+
+          <strong>
+            2024
+          </strong>
+
+          <span>
+            KMUTT Project Day
+          </span>
+
+        </div>
+
 
       </div>
 
 
       <div class="tags">
 
-        <span class="tag">B.Eng. Capstone</span>
+        <span class="tag">
+          B.Eng. Capstone
+        </span>
 
-        <span class="tag">YOLOv8</span>
+        <span class="tag">
+          YOLOv8
+        </span>
 
-        <span class="tag">YOLOv9</span>
+        <span class="tag">
+          YOLOv9
+        </span>
 
-        <span class="tag">GELAN</span>
+        <span class="tag">
+          GELAN
+        </span>
 
-        <span class="tag">Object Detection</span>
+        <span class="tag">
+          Object Detection
+        </span>
 
-        <span class="tag">Computer Vision</span>
+        <span class="tag">
+          Computer Vision
+        </span>
 
       </div>
+
 
 
       <div class="buttons">
 
         <a
           class="button button-primary"
-          href="project-day-2024-poster.pdf"
+          href="./Poster%20Project%20Day.pdf"
           target="_blank">
 
           View Project Day Poster ↗
@@ -562,7 +769,9 @@
 
       </div>
 
+
     </article>
+
 
 
     <div class="arrow">
@@ -570,105 +779,189 @@
     </div>
 
 
-    <!-- ========================================
-         01 M.ENG. 2D GPR
-    ========================================= -->
+
+    <!-- =========================================
+         01 M.ENG 2D GPR
+    ========================================== -->
 
     <article class="project">
 
+
       <div class="project-number">
-        01 · M.Eng. Research · Conference Publication · NCCE31 · 2026
+
+        01 · M.Eng. Research
+        · Conference Publication
+        · NCCE31 · 2026
+
       </div>
+
 
       <h3>
+
         2D GPR Cavity Detection
+
       </h3>
 
+
       <div class="subtitle">
-        Single-view B-scan cavity detection and deep-learning model benchmarking.
+
+        Single-view B-scan cavity detection
+        and deep-learning model benchmarking.
+
       </div>
+
 
 
       <ul>
 
+
         <li>
-          Developed object detection for subsurface cavity identification
+
+          Developed object detection for
+          subsurface cavity identification
           from single-view GPR B-scan images.
+
         </li>
 
-        <li>
-          Compared YOLOv12, YOLOv26 and YOLO-DINOv3 models.
-        </li>
 
         <li>
-          Used 1,391 GPR B-scan images from Bangkok,
-          Japan, Roboflow Universe and gprMax.
+
+          Compared YOLOv12,
+          YOLOv26 and YOLO-DINOv3 models.
+
         </li>
 
+
         <li>
+
+          Used 1,391 GPR B-scan images
+          from Bangkok, Japan,
+          Roboflow Universe and gprMax.
+
+        </li>
+
+
+        <li>
+
           Applied gprMax electromagnetic simulation
           for synthetic GPR data generation.
+
         </li>
 
+
         <li>
-          Best model: pretrained YOLOv26s.
+
+          Best model:
+          pretrained YOLOv26s.
+
         </li>
+
 
       </ul>
 
 
+
       <div class="metrics">
 
-        <div class="metric">
-          <strong>1,391</strong>
-          <span>B-scan Images</span>
-        </div>
 
         <div class="metric">
-          <strong>0.581</strong>
-          <span>mAP@0.5</span>
+
+          <strong>
+            1,391
+          </strong>
+
+          <span>
+            B-scan Images
+          </span>
+
         </div>
 
-        <div class="metric">
-          <strong>0.820</strong>
-          <span>Precision</span>
-        </div>
 
         <div class="metric">
-          <strong>0.594</strong>
-          <span>F1-score</span>
+
+          <strong>
+            0.581
+          </strong>
+
+          <span>
+            mAP@0.5
+          </span>
+
         </div>
+
+
+        <div class="metric">
+
+          <strong>
+            0.820
+          </strong>
+
+          <span>
+            Precision
+          </span>
+
+        </div>
+
+
+        <div class="metric">
+
+          <strong>
+            0.594
+          </strong>
+
+          <span>
+            F1-score
+          </span>
+
+        </div>
+
 
       </div>
+
 
 
       <div class="tags">
 
-        <span class="tag">M.Eng. Research</span>
+        <span class="tag">
+          M.Eng. Research
+        </span>
 
-        <span class="tag">2D B-scan</span>
+        <span class="tag">
+          2D B-scan
+        </span>
 
-        <span class="tag">YOLOv12</span>
+        <span class="tag">
+          YOLOv12
+        </span>
 
-        <span class="tag">YOLOv26</span>
+        <span class="tag">
+          YOLOv26
+        </span>
 
-        <span class="tag">DINOv3</span>
+        <span class="tag">
+          DINOv3
+        </span>
 
-        <span class="tag">gprMax</span>
+        <span class="tag">
+          gprMax
+        </span>
 
       </div>
 
 
+
       <div class="buttons">
+
 
         <a
           class="button button-primary"
-          href="2_NCCE31_Manuscript_TH_Suphawut.pdf"
+          href="./2_NCCE31_Manuscript_TH_Suphawut.pdf"
           target="_blank">
 
           Conference Paper ↗
 
         </a>
+
 
 
         <a
@@ -681,6 +974,7 @@
         </a>
 
 
+
         <a
           class="button button-secondary"
           href="https://github.com/suphawutq56789/Single-dino-Yolov12"
@@ -689,6 +983,7 @@
           View Code ↗
 
         </a>
+
 
 
         <a
@@ -700,9 +995,12 @@
 
         </a>
 
+
       </div>
 
+
     </article>
+
 
 
     <div class="arrow">
@@ -710,99 +1008,184 @@
     </div>
 
 
-    <!-- ========================================
-         02 TRIVIEW
-    ========================================= -->
+
+    <!-- =========================================
+         02 TRIVIEW YOLO
+    ========================================== -->
 
     <article class="project">
 
+
       <div class="project-number">
-        02 · M.Eng. Research · First Author · arXiv Preprint · 2026
+
+        02 · M.Eng. Research
+        · First Author
+        · arXiv Preprint · 2026
+
       </div>
+
 
       <h3>
+
         TriView-YOLO
+
       </h3>
 
+
       <div class="subtitle">
-        Multi-view GPR cavity detection using three co-registered radar views.
+
+        Multi-view GPR cavity detection
+        using three co-registered radar views.
+
       </div>
+
 
 
       <ul>
 
-        <li>
-          Extended GPR cavity detection from single-view
-          analysis to a three-view deep-learning architecture.
-        </li>
 
         <li>
+
+          Extended GPR cavity detection
+          from single-view analysis
+          to a three-view deep-learning architecture.
+
+        </li>
+
+
+        <li>
+
           Combined longitudinal B-scan,
-          horizontal C-scan and cross-section B-scan.
+          horizontal C-scan and
+          cross-section B-scan.
+
         </li>
 
+
         <li>
+
           Fused three RGB views into a
           <strong>9-channel input</strong>.
+
         </li>
 
-        <li>
-          Introduced TripleInputConv for multi-view feature processing.
-        </li>
 
         <li>
-          Evaluated accuracy, recall, computational cost
+
+          Introduced TripleInputConv
+          for multi-view feature processing.
+
+        </li>
+
+
+        <li>
+
+          Evaluated accuracy,
+          recall, computational cost
           and inference latency.
+
         </li>
+
 
       </ul>
 
 
+
       <div class="metrics">
 
-        <div class="metric">
-          <strong>0.558</strong>
-          <span>mAP50</span>
-        </div>
 
         <div class="metric">
-          <strong>0.629</strong>
-          <span>Recall</span>
+
+          <strong>
+            0.558
+          </strong>
+
+          <span>
+            mAP50
+          </span>
+
         </div>
 
-        <div class="metric">
-          <strong>23.6</strong>
-          <span>GFLOPs</span>
-        </div>
 
         <div class="metric">
-          <strong>3.1 ms</strong>
-          <span>Latency / Image</span>
+
+          <strong>
+            0.629
+          </strong>
+
+          <span>
+            Recall
+          </span>
+
         </div>
+
+
+        <div class="metric">
+
+          <strong>
+            23.6
+          </strong>
+
+          <span>
+            GFLOPs
+          </span>
+
+        </div>
+
+
+        <div class="metric">
+
+          <strong>
+            3.1 ms
+          </strong>
+
+          <span>
+            Latency / Image
+          </span>
+
+        </div>
+
 
       </div>
+
 
 
       <div class="tags">
 
-        <span class="tag">M.Eng. Research</span>
+        <span class="tag">
+          M.Eng. Research
+        </span>
 
-        <span class="tag">Multi-View</span>
+        <span class="tag">
+          Multi-View
+        </span>
 
-        <span class="tag">3 Views</span>
+        <span class="tag">
+          3 Views
+        </span>
 
-        <span class="tag">9 Channels</span>
+        <span class="tag">
+          9 Channels
+        </span>
 
-        <span class="tag">YOLOv12</span>
+        <span class="tag">
+          YOLOv12
+        </span>
 
-        <span class="tag">TripleInputConv</span>
+        <span class="tag">
+          TripleInputConv
+        </span>
 
-        <span class="tag">PyTorch</span>
+        <span class="tag">
+          PyTorch
+        </span>
 
       </div>
 
 
+
       <div class="buttons">
+
 
         <a
           class="button button-primary"
@@ -812,6 +1195,7 @@
           View arXiv ↗
 
         </a>
+
 
 
         <a
@@ -824,6 +1208,7 @@
         </a>
 
 
+
         <a
           class="button button-secondary"
           href="https://huggingface.co/spaces/QSuphawut/3d-cavity-nodino"
@@ -833,9 +1218,12 @@
 
         </a>
 
+
       </div>
 
+
     </article>
+
 
 
     <div class="arrow">
@@ -843,78 +1231,128 @@
     </div>
 
 
-    <!-- ========================================
+
+    <!-- =========================================
          03 DEPLOYMENT
-    ========================================= -->
+    ========================================== -->
 
     <article class="project">
 
+
       <div class="project-number">
+
         03 · M.Eng. Research Deployment · 2026
+
       </div>
+
 
       <h3>
+
         GPR AI Detection Platform
+
       </h3>
 
+
       <div class="subtitle">
-        Deployable AI application for 2D and multi-view GPR cavity analysis.
+
+        Deployable AI application for
+        2D and multi-view GPR cavity analysis.
+
       </div>
+
 
 
       <ul>
 
+
         <li>
+
           Supports both
           <strong>2D single-view</strong>
           and
           <strong>3-view multi-view</strong>
           inference.
+
         </li>
 
-        <li>
-          Interactive browser-based AI application.
-        </li>
 
         <li>
+
+          Interactive browser-based
+          AI application.
+
+        </li>
+
+
+        <li>
+
           Adjustable confidence threshold,
           image size and GPR depth parameters.
+
         </li>
 
-        <li>
-          Generates annotated detection results.
-        </li>
 
         <li>
-          Developed using Gradio and Hugging Face Spaces.
+
+          Generates annotated
+          detection results.
+
         </li>
 
+
         <li>
-          Dockerized using Docker and Docker Compose
+
+          Developed using
+          Gradio and Hugging Face Spaces.
+
+        </li>
+
+
+        <li>
+
+          Dockerized using
+          Docker and Docker Compose
           for reproducible deployment.
+
         </li>
+
 
       </ul>
 
 
+
       <div class="tags">
 
-        <span class="tag">Gradio</span>
+        <span class="tag">
+          Gradio
+        </span>
 
-        <span class="tag">Hugging Face</span>
+        <span class="tag">
+          Hugging Face
+        </span>
 
-        <span class="tag">Docker</span>
+        <span class="tag">
+          Docker
+        </span>
 
-        <span class="tag">Docker Compose</span>
+        <span class="tag">
+          Docker Compose
+        </span>
 
-        <span class="tag">YOLO</span>
+        <span class="tag">
+          YOLO
+        </span>
 
-        <span class="tag">Deployment</span>
+        <span class="tag">
+          Deployment
+        </span>
 
       </div>
 
 
+
       <div class="buttons">
+
 
         <a
           class="button button-primary"
@@ -925,7 +1363,9 @@
 
         </a>
 
+
       </div>
+
 
     </article>
 
@@ -933,52 +1373,78 @@
   </section>
 
 
-  <!-- =========================
-       OTHER APPLICATIONS
-  ========================= -->
+
+  <!-- ADDITIONAL PROJECTS -->
 
   <section id="applications">
 
+
     <div class="section-label">
+
       ADDITIONAL AI PROJECTS
+
     </div>
 
+
     <h2 class="section-title">
+
       Applications & Automation
+
     </h2>
+
 
 
     <div class="app-grid">
 
 
-      <!-- PAVEMENT LIVE APP -->
+
+      <!-- PAVEMENT APP -->
 
       <article class="app">
 
+
         <div class="section-label">
+
           Computer Vision
+
         </div>
 
+
         <h3>
+
           Pavement Crack Detection App
+
         </h3>
 
+
         <p>
-          Interactive YOLO-based web application for pavement
-          crack detection from uploaded road images.
+
+          Interactive YOLO-based web application
+          for pavement crack detection
+          from uploaded road images.
+
         </p>
+
 
         <div class="tags">
 
-          <span class="tag">YOLO</span>
+          <span class="tag">
+            YOLO
+          </span>
 
-          <span class="tag">Computer Vision</span>
+          <span class="tag">
+            Computer Vision
+          </span>
 
-          <span class="tag">Hugging Face</span>
+          <span class="tag">
+            Hugging Face
+          </span>
 
         </div>
 
+
         <div class="buttons">
+
 
           <a
             class="button button-primary"
@@ -989,40 +1455,62 @@
 
           </a>
 
+
         </div>
+
 
       </article>
 
 
-      <!-- OMC -->
+
+      <!-- OMC MDD -->
 
       <article class="app">
 
+
         <div class="section-label">
+
           Explainable AI
+
         </div>
 
+
         <h3>
+
           Soil Compaction OMC & MDD Estimator
+
         </h3>
 
+
         <p>
-          Engineering ML application for estimating
-          Optimum Moisture Content and Maximum Dry Density
+
+          Engineering ML application
+          for estimating Optimum Moisture Content
+          and Maximum Dry Density
           with SHAP model explainability.
+
         </p>
+
 
         <div class="tags">
 
-          <span class="tag">Machine Learning</span>
+          <span class="tag">
+            Machine Learning
+          </span>
 
-          <span class="tag">SHAP</span>
+          <span class="tag">
+            SHAP
+          </span>
 
-          <span class="tag">Explainable AI</span>
+          <span class="tag">
+            Explainable AI
+          </span>
 
         </div>
 
+
         <div class="buttons">
+
 
           <a
             class="button button-primary"
@@ -1033,66 +1521,100 @@
 
           </a>
 
+
         </div>
 
+
       </article>
+
 
 
       <!-- N8N -->
 
       <article class="app">
 
+
         <div class="section-label">
+
           AI Automation
+
         </div>
 
+
         <h3>
+
           Multi-Agent AI Workflow
+
         </h3>
 
+
         <p>
+
           Multi-agent workflow developed with n8n,
-          connecting LLM agents, memory, search tools,
-          APIs, Google Calendar and Gmail.
+          connecting LLM agents, memory,
+          search tools, APIs,
+          Google Calendar and Gmail.
+
         </p>
+
 
         <div class="tags">
 
-          <span class="tag">n8n</span>
+          <span class="tag">
+            n8n
+          </span>
 
-          <span class="tag">AI Agents</span>
+          <span class="tag">
+            AI Agents
+          </span>
 
-          <span class="tag">LLM</span>
+          <span class="tag">
+            LLM
+          </span>
 
-          <span class="tag">OpenRouter</span>
+          <span class="tag">
+            OpenRouter
+          </span>
 
-          <span class="tag">API</span>
+          <span class="tag">
+            API
+          </span>
 
         </div>
 
+
       </article>
 
+
     </div>
+
 
   </section>
 
 
-  <!-- =========================
-       CONTACT
-  ========================= -->
+
+  <!-- CONTACT -->
 
   <section id="contact">
 
+
     <div class="section-label">
+
       CONTACT
+
     </div>
 
+
     <h2 class="section-title">
+
       Explore My Work
+
     </h2>
 
 
+
     <div class="buttons">
+
 
       <a
         class="button button-primary"
@@ -1101,6 +1623,7 @@
         Email
 
       </a>
+
 
 
       <a
@@ -1113,6 +1636,7 @@
       </a>
 
 
+
       <a
         class="button button-secondary"
         href="https://huggingface.co/QSuphawut"
@@ -1122,9 +1646,12 @@
 
       </a>
 
+
     </div>
 
+
   </section>
+
 
 
   <footer>
@@ -1133,6 +1660,7 @@
     · AI / Machine Learning Portfolio
 
   </footer>
+
 
 </div>
 
