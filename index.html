@@ -6,7 +6,7 @@
 
   <meta
     name="description"
-    content="Suphawut Thawinutchokaudom — AI / Machine Learning Engineer portfolio focused on Computer Vision, Deep Learning, YOLO, GPR, Explainable AI and deployable AI applications."
+    content="Suphawut Thawinutchokaudom — AI / Machine Learning Engineer focused on Computer Vision, Deep Learning, YOLO, GPR, Docker, Docker Compose and AI Deployment."
   />
 
   <title>
@@ -16,22 +16,17 @@
   <style>
     :root {
       --bg: #081426;
-      --bg2: #0d1b2f;
+      --bg-soft: #0d1b2f;
       --card: #10223b;
-      --card2: #132843;
-
+      --card-2: #132843;
       --text: #f4f7fb;
       --muted: #aab7c8;
-
       --blue: #6ba8ff;
       --green: #72e0c1;
-
+      --yellow: #ffd166;
       --line: #223a58;
-
-      --shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
-
+      --shadow: 0 18px 45px rgba(0,0,0,.25);
       --radius: 20px;
-
       --max: 1180px;
     }
 
@@ -45,28 +40,21 @@
 
     body {
       margin: 0;
-
-      font-family:
-        Inter,
-        Segoe UI,
-        Roboto,
-        Arial,
-        sans-serif;
+      font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--text);
 
       background:
         radial-gradient(
           circle at top right,
-          rgba(107, 168, 255, 0.10),
+          rgba(107,168,255,.10),
           transparent 28%
         ),
         radial-gradient(
           circle at top left,
-          rgba(114, 224, 193, 0.07),
-          transparent 24%
+          rgba(114,224,193,.08),
+          transparent 25%
         ),
         var(--bg);
-
-      color: var(--text);
 
       line-height: 1.65;
     }
@@ -77,66 +65,43 @@
     }
 
     .container {
-      width: min(
-        var(--max),
-        calc(100% - 36px)
-      );
-
+      width: min(var(--max), calc(100% - 36px));
       margin: auto;
     }
 
     /* =========================
-       NAVBAR
+       NAV
     ========================== */
 
     nav {
       position: sticky;
       top: 0;
-
-      z-index: 1000;
-
+      z-index: 999;
       backdrop-filter: blur(14px);
-
-      background:
-        rgba(8, 20, 38, 0.82);
-
-      border-bottom:
-        1px solid
-        rgba(255, 255, 255, 0.06);
+      background: rgba(8,20,38,.88);
+      border-bottom: 1px solid rgba(255,255,255,.06);
     }
 
     .nav-inner {
       min-height: 68px;
-
       display: flex;
-
-      align-items: center;
-
       justify-content: space-between;
-
+      align-items: center;
       gap: 24px;
     }
 
     .brand {
-      font-weight: 800;
-
-      letter-spacing: 0.02em;
-
-      white-space: nowrap;
+      font-weight: 900;
+      letter-spacing: .03em;
     }
 
     .nav-links {
       display: flex;
-
-      gap: 22px;
-
-      color: var(--muted);
-
-      font-size: 0.95rem;
-
       flex-wrap: wrap;
-
       justify-content: flex-end;
+      gap: 22px;
+      font-size: .92rem;
+      color: var(--muted);
     }
 
     .nav-links a:hover {
@@ -148,84 +113,51 @@
     ========================== */
 
     header {
-      padding: 96px 0 60px;
+      padding: 95px 0 65px;
     }
 
     .hero {
       display: grid;
-
-      grid-template-columns:
-        1.35fr 0.65fr;
-
-      gap: 34px;
-
+      grid-template-columns: 1.35fr .65fr;
+      gap: 32px;
       align-items: center;
     }
 
     .eyebrow {
       color: var(--green);
-
-      font-weight: 800;
-
-      letter-spacing: 0.12em;
-
       text-transform: uppercase;
-
-      font-size: 0.82rem;
-
+      letter-spacing: .12em;
+      font-size: .82rem;
+      font-weight: 900;
       margin-bottom: 12px;
     }
 
     h1 {
-      font-size:
-        clamp(
-          2.7rem,
-          6vw,
-          5.6rem
-        );
-
-      line-height: 0.98;
-
-      margin:
-        0 0 20px;
-
-      letter-spacing:
-        -0.055em;
+      margin: 0 0 18px;
+      line-height: .98;
+      font-size: clamp(2.8rem, 6vw, 5.5rem);
+      letter-spacing: -.055em;
     }
 
     .headline {
-      font-size:
-        clamp(
-          1.1rem,
-          2vw,
-          1.35rem
-        );
-
+      max-width: 850px;
       color: #dce6f4;
-
-      max-width: 820px;
-
-      margin:
-        0 0 18px;
+      font-size: clamp(1.08rem, 2vw, 1.35rem);
+      margin: 0 0 18px;
     }
 
     .hero-copy {
+      max-width: 790px;
       color: var(--muted);
-
-      max-width: 760px;
-
       font-size: 1.02rem;
     }
 
     .hero-actions,
     .actions {
       display: flex;
-
       flex-wrap: wrap;
-
-      gap: 12px;
-
-      margin-top: 25px;
+      gap: 11px;
+      margin-top: 24px;
     }
 
     /* =========================
@@ -234,114 +166,64 @@
 
     .btn {
       display: inline-flex;
-
-      align-items: center;
-
       justify-content: center;
-
+      align-items: center;
       min-height: 44px;
-
-      padding:
-        10px 16px;
-
-      border-radius:
-        12px;
-
-      border:
-        1px solid
-        var(--line);
-
-      background:
-        rgba(
-          255,
-          255,
-          255,
-          0.03
-        );
-
+      padding: 10px 16px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(255,255,255,.03);
       color: #eef5ff;
-
-      font-weight: 700;
-
-      transition:
-        0.2s ease;
+      font-weight: 800;
+      transition: .2s ease;
     }
 
     .btn:hover {
-      transform:
-        translateY(-2px);
-
-      border-color:
-        var(--blue);
-
-      background:
-        rgba(
-          107,
-          168,
-          255,
-          0.10
-        );
+      transform: translateY(-2px);
+      border-color: var(--blue);
+      background: rgba(107,168,255,.1);
     }
 
     .btn.primary {
-      background:
-        var(--blue);
-
-      color:
-        #07111e;
-
-      border-color:
-        var(--blue);
+      background: var(--blue);
+      color: #07111e;
+      border-color: var(--blue);
     }
 
     .btn.green {
-      background:
-        var(--green);
+      background: var(--green);
+      color: #061713;
+      border-color: var(--green);
+    }
 
-      color:
-        #061713;
-
-      border-color:
-        var(--green);
+    .btn.yellow {
+      background: var(--yellow);
+      color: #16130a;
+      border-color: var(--yellow);
     }
 
     /* =========================
-       CARDS
+       CARD
     ========================== */
 
-    .hero-panel,
     .panel,
+    .hero-panel,
     .project,
+    .deployment-card,
     .app-card,
     .publication,
     .education-card {
-
-      border:
-        1px solid
-        var(--line);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
 
       background:
         linear-gradient(
           180deg,
-          rgba(
-            16,
-            34,
-            59,
-            0.92
-          ),
-          rgba(
-            13,
-            27,
-            47,
-            0.90
-          )
+          rgba(16,34,59,.94),
+          rgba(13,27,47,.92)
         );
 
-      border-radius:
-        var(--radius);
-
-      box-shadow:
-        var(--shadow);
+      box-shadow: var(--shadow);
     }
 
     .hero-panel {
@@ -349,74 +231,46 @@
     }
 
     .hero-panel h3 {
-      margin:
-        0 0 14px;
+      margin: 0 0 14px;
     }
 
     .mini-list {
       display: grid;
-
       gap: 11px;
-
-      color:
-        var(--muted);
-
-      font-size:
-        0.94rem;
+      font-size: .94rem;
+      color: var(--muted);
     }
 
     .mini-list strong {
-      color:
-        var(--text);
+      color: var(--text);
     }
 
     /* =========================
-       GENERAL SECTION
+       SECTION
     ========================== */
 
     section {
-      padding:
-        66px 0;
+      padding: 66px 0;
     }
 
     .section-head {
       display: flex;
-
-      justify-content:
-        space-between;
-
-      align-items:
-        end;
-
-      gap:
-        30px;
-
-      margin-bottom:
-        28px;
+      justify-content: space-between;
+      align-items: end;
+      gap: 30px;
+      margin-bottom: 28px;
     }
 
     .section-head h2 {
       margin: 0;
-
-      font-size:
-        clamp(
-          2rem,
-          4vw,
-          3.2rem
-        );
-
-      letter-spacing:
-        -0.035em;
+      font-size: clamp(2rem, 4vw, 3.15rem);
+      letter-spacing: -.035em;
     }
 
     .section-head p {
       margin: 0;
-
-      color:
-        var(--muted);
-
-      max-width:
-        620px;
+      max-width: 620px;
+      color: var(--muted);
     }
 
     /* =========================
@@ -425,127 +279,71 @@
 
     .about-grid {
       display: grid;
-
-      grid-template-columns:
-        1.2fr 0.8fr;
-
-      gap:
-        24px;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 24px;
     }
 
     .panel {
-      padding:
-        28px;
+      padding: 28px;
     }
 
     .panel h3 {
-      margin-top:
-        0;
-
-      font-size:
-        1.5rem;
+      margin-top: 0;
+      font-size: 1.5rem;
     }
 
     .panel p {
-      color:
-        var(--muted);
+      color: var(--muted);
     }
 
     .points {
-      display:
-        grid;
-
-      grid-template-columns:
-        repeat(
-          2,
-          1fr
-        );
-
-      gap:
-        14px;
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 14px;
     }
 
     .point {
-      padding:
-        18px;
-
-      border-radius:
-        16px;
-
-      background:
-        var(--card2);
-
-      border:
-        1px solid
-        rgba(
-          255,
-          255,
-          255,
-          0.05
-        );
+      padding: 18px;
+      border-radius: 16px;
+      background: var(--card-2);
+      border: 1px solid rgba(255,255,255,.05);
     }
 
     .point b {
-      display:
-        block;
-
-      margin-bottom:
-        5px;
+      display: block;
+      margin-bottom: 5px;
     }
 
     .point span {
-      color:
-        var(--muted);
-
-      font-size:
-        0.9rem;
+      color: var(--muted);
+      font-size: .9rem;
     }
 
     /* =========================
-       TAGS
+       TAG
     ========================== */
 
     .tags {
-      display:
-        flex;
-
-      flex-wrap:
-        wrap;
-
-      gap:
-        9px;
-
-      margin-top:
-        18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 18px;
     }
 
     .tag {
-      border:
-        1px solid
-        var(--line);
+      padding: 7px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(107,168,255,.07);
+      color: #dbeaff;
+      font-size: .84rem;
+      font-weight: 800;
+    }
 
-      background:
-        rgba(
-          107,
-          168,
-          255,
-          0.07
-        );
-
-      padding:
-        7px 10px;
-
-      border-radius:
-        999px;
-
-      color:
-        #dbeaff;
-
-      font-size:
-        0.84rem;
-
-      font-weight:
-        700;
+    .tag.docker {
+      background: rgba(107,168,255,.16);
+      border-color: rgba(107,168,255,.45);
+      color: #bcd8ff;
     }
 
     /* =========================
@@ -553,218 +351,144 @@
     ========================== */
 
     .timeline {
-      display:
-        grid;
-
-      gap:
-        18px;
+      display: grid;
+      gap: 18px;
     }
 
     .project {
-      padding:
-        28px;
-
-      position:
-        relative;
-
-      overflow:
-        hidden;
+      position: relative;
+      overflow: hidden;
+      padding: 28px;
     }
 
     .project::before {
-      content:
-        "";
-
-      position:
-        absolute;
-
-      left:
-        0;
-
-      top:
-        0;
-
-      bottom:
-        0;
-
-      width:
-        4px;
-
-      background:
-        linear-gradient(
-          var(--blue),
-          var(--green)
-        );
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(var(--blue), var(--green));
     }
 
     .project-top {
-      display:
-        flex;
-
-      justify-content:
-        space-between;
-
-      gap:
-        18px;
-
-      align-items:
-        flex-start;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
     }
 
     .project-number {
-      color:
-        var(--blue);
-
-      font-weight:
-        900;
-
-      letter-spacing:
-        0.08em;
-
-      text-transform:
-        uppercase;
-
-      font-size:
-        0.82rem;
+      color: var(--blue);
+      font-size: .82rem;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
     }
 
     .project h3 {
-      margin:
-        5px 0 7px;
-
-      font-size:
-        1.55rem;
+      margin: 5px 0 7px;
+      font-size: 1.55rem;
     }
 
     .meta {
-      color:
-        var(--green);
-
-      font-size:
-        0.9rem;
-
-      font-weight:
-        800;
+      color: var(--green);
+      font-size: .9rem;
+      font-weight: 800;
     }
 
     .project p {
-      color:
-        var(--muted);
+      color: var(--muted);
     }
 
-    /* =========================
-       METRICS
-    ========================== */
-
     .metrics {
-      display:
-        grid;
-
-      grid-template-columns:
-        repeat(
-          3,
-          1fr
-        );
-
-      gap:
-        10px;
-
-      min-width:
-        340px;
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 10px;
+      min-width: 340px;
     }
 
     .metric {
-      border:
-        1px solid
-        var(--line);
-
-      background:
-        rgba(
-          255,
-          255,
-          255,
-          0.03
-        );
-
-      padding:
-        13px;
-
-      border-radius:
-        14px;
-
-      text-align:
-        center;
+      padding: 13px;
+      text-align: center;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.03);
     }
 
     .metric b {
-      display:
-        block;
-
-      font-size:
-        1.25rem;
-
-      color:
-        var(--text);
+      display: block;
+      font-size: 1.2rem;
     }
 
     .metric span {
-      font-size:
-        0.78rem;
-
-      color:
-        var(--muted);
+      color: var(--muted);
+      font-size: .78rem;
     }
 
     .arrow {
-      text-align:
-        center;
-
-      color:
-        var(--muted);
-
-      font-size:
-        1.6rem;
-
-      line-height:
-        1;
+      text-align: center;
+      color: var(--muted);
+      font-size: 1.6rem;
     }
 
     /* =========================
-       DOCKER
+       DEPLOYMENT
     ========================== */
 
-    .docker-box {
-      margin-top:
-        18px;
-
-      padding:
-        16px;
-
-      border:
-        1px solid
-        var(--line);
-
-      border-radius:
-        14px;
-
-      background:
-        rgba(
-          0,
-          0,
-          0,
-          0.14
-        );
-
-      overflow:
-        auto;
+    .deployment-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 18px;
     }
 
-    .docker-box code {
-      color:
-        #cfe2ff;
+    .deployment-card {
+      padding: 24px;
+    }
 
-      white-space:
-        pre-wrap;
+    .deployment-icon {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    .deployment-card h3 {
+      margin: 0 0 8px;
+    }
+
+    .deployment-card p {
+      color: var(--muted);
+    }
+
+    .docker-highlight {
+      border-color: rgba(107,168,255,.55);
+
+      background:
+        linear-gradient(
+          180deg,
+          rgba(13,49,86,.96),
+          rgba(13,27,47,.92)
+        );
+    }
+
+    .docker-command {
+      margin-top: 18px;
+      padding: 17px;
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #06101f;
+    }
+
+    .docker-command strong {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--green);
+    }
+
+    .docker-command code {
+      color: #cfe2ff;
+      font-family: Consolas, Monaco, monospace;
+      white-space: pre-wrap;
     }
 
     /* =========================
@@ -772,57 +496,39 @@
     ========================== */
 
     .apps {
-      display:
-        grid;
-
-      grid-template-columns:
-        repeat(
-          3,
-          1fr
-        );
-
-      gap:
-        18px;
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 18px;
     }
 
     .app-card {
-      padding:
-        24px;
+      padding: 24px;
     }
 
     .app-card h3 {
-      margin-top:
-        0;
+      margin-top: 0;
     }
 
     .app-card p {
-      color:
-        var(--muted);
+      color: var(--muted);
     }
 
     /* =========================
-       PUBLICATION
+       PUBLICATIONS
     ========================== */
 
     .publication {
-      padding:
-        22px 24px;
-
-      margin-bottom:
-        14px;
+      padding: 22px 24px;
+      margin-bottom: 14px;
     }
 
     .publication strong {
-      font-size:
-        1.05rem;
+      font-size: 1.05rem;
     }
 
     .publication p {
-      margin:
-        6px 0 0;
-
-      color:
-        var(--muted);
+      margin: 6px 0 0;
+      color: var(--muted);
     }
 
     /* =========================
@@ -830,32 +536,21 @@
     ========================== */
 
     .education-grid {
-      display:
-        grid;
-
-      grid-template-columns:
-        repeat(
-          2,
-          1fr
-        );
-
-      gap:
-        18px;
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 18px;
     }
 
     .education-card {
-      padding:
-        24px;
+      padding: 24px;
     }
 
     .education-card h3 {
-      margin-top:
-        0;
+      margin-top: 0;
     }
 
     .education-card p {
-      color:
-        var(--muted);
+      color: var(--muted);
     }
 
     /* =========================
@@ -863,87 +558,39 @@
     ========================== */
 
     .contact {
-      text-align:
-        center;
-
-      padding:
-        80px 0 100px;
+      text-align: center;
+      padding: 80px 0 100px;
     }
 
     .contact-box {
-      border:
-        1px solid
-        var(--line);
+      padding: 44px 24px;
+      border-radius: 28px;
+      border: 1px solid var(--line);
 
       background:
         linear-gradient(
           135deg,
-          rgba(
-            107,
-            168,
-            255,
-            0.12
-          ),
-          rgba(
-            114,
-            224,
-            193,
-            0.07
-          )
+          rgba(107,168,255,.12),
+          rgba(114,224,193,.08)
         );
-
-      border-radius:
-        28px;
-
-      padding:
-        44px 24px;
     }
 
     .contact-box h2 {
-      margin:
-        0 0 12px;
-
-      font-size:
-        clamp(
-          2rem,
-          4vw,
-          3.4rem
-        );
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 4vw, 3.4rem);
     }
 
     .contact-box p {
-      color:
-        var(--muted);
-
-      max-width:
-        700px;
-
-      margin:
-        0 auto;
+      max-width: 700px;
+      margin: auto;
+      color: var(--muted);
     }
 
-    /* =========================
-       FOOTER
-    ========================== */
-
     footer {
-      border-top:
-        1px solid
-        rgba(
-          255,
-          255,
-          255,
-          0.06
-        );
-
-      color:
-        var(--muted);
-
-      padding:
-        22px 0 30px;
-
-      font-size:
-        0.9rem;
+      padding: 22px 0 30px;
+      color: var(--muted);
+      font-size: .9rem;
+      border-top: 1px solid rgba(255,255,255,.06);
     }
 
     /* =========================
@@ -954,74 +601,59 @@
 
       .hero,
       .about-grid {
-        grid-template-columns:
-          1fr;
+        grid-template-columns: 1fr;
       }
 
+      .deployment-grid,
       .apps,
       .education-grid {
-        grid-template-columns:
-          1fr;
+        grid-template-columns: 1fr;
       }
 
       .project-top {
-        display:
-          block;
+        display: block;
       }
 
       .metrics {
-        margin-top:
-          18px;
-
-        min-width:
-          0;
+        min-width: 0;
+        margin-top: 18px;
       }
     }
 
     @media(max-width: 640px) {
 
       .nav-inner {
-        align-items:
-          flex-start;
-
-        padding:
-          14px 0;
+        align-items: flex-start;
+        padding: 14px 0;
       }
 
       .nav-links {
-        gap:
-          12px;
-
-        font-size:
-          0.84rem;
+        gap: 12px;
+        font-size: .84rem;
       }
 
       header {
-        padding-top:
-          62px;
+        padding-top: 62px;
       }
 
       .points,
       .metrics {
-        grid-template-columns:
-          1fr;
+        grid-template-columns: 1fr;
       }
 
       .section-head {
-        display:
-          block;
+        display: block;
       }
 
       .section-head p {
-        margin-top:
-          10px;
+        margin-top: 10px;
       }
 
       .project,
       .panel,
-      .app-card {
-        padding:
-          21px;
+      .app-card,
+      .deployment-card {
+        padding: 21px;
       }
     }
   </style>
@@ -1029,18 +661,13 @@
 
 <body>
 
-  <!-- =========================
-       NAVBAR
-  ========================== -->
+  <!-- NAV -->
 
   <nav>
 
     <div class="container nav-inner">
 
-      <a
-        href="#top"
-        class="brand"
-      >
+      <a href="#top" class="brand">
         SUPHAWUT.
       </a>
 
@@ -1052,6 +679,10 @@
 
         <a href="#research">
           Research
+        </a>
+
+        <a href="#deployment">
+          Deployment
         </a>
 
         <a href="#applications">
@@ -1072,9 +703,7 @@
 
   </nav>
 
-  <!-- =========================
-       HERO
-  ========================== -->
+  <!-- HERO -->
 
   <header id="top">
 
@@ -1093,17 +722,19 @@
         </h1>
 
         <p class="headline">
+
           Computer Vision · Deep Learning · YOLO · GPR ·
-          Explainable AI · Dockerized AI Deployment
+          Explainable AI · Docker · Docker Compose · AI Deployment
+
         </p>
 
         <p class="hero-copy">
 
           AI / Machine Learning Engineer focused on developing
-          practical computer-vision systems, from data preparation
-          and model training to evaluation, visualization,
-          interactive AI applications, containerization and
-          reproducible deployment.
+          practical computer-vision systems from data preparation
+          and model training through evaluation, visualization,
+          interactive applications, containerization and
+          reproducible AI deployment.
 
         </p>
 
@@ -1135,7 +766,7 @@
           </a>
 
           <a
-            class="btn"
+            class="btn yellow"
             href="https://hub.docker.com/r/suphawut725/gpr-detector"
             target="_blank"
             rel="noopener noreferrer"
@@ -1147,8 +778,6 @@
 
       </div>
 
-      <!-- CORE STACK -->
-
       <aside class="hero-panel">
 
         <h3>
@@ -1158,56 +787,43 @@
         <div class="mini-list">
 
           <div>
-            <strong>
-              AI / DL:
-            </strong>
+            <strong>AI / DL:</strong>
             PyTorch, YOLO, Object Detection
           </div>
 
           <div>
-            <strong>
-              Vision:
-            </strong>
+            <strong>Computer Vision:</strong>
             OpenCV, Image Processing
           </div>
 
           <div>
-            <strong>
-              Data:
-            </strong>
+            <strong>Programming:</strong>
             Python, NumPy, Pandas
           </div>
 
           <div>
-            <strong>
-              XAI:
-            </strong>
+            <strong>Explainable AI:</strong>
             SHAP, Model Interpretation
           </div>
 
           <div>
-            <strong>
-              Deployment:
-            </strong>
-            Gradio, Hugging Face,
-            Docker, Docker Compose,
-            Docker Hub
+            <strong>AI Deployment:</strong>
+            Gradio, Hugging Face
           </div>
 
           <div>
-            <strong>
-              Automation:
-            </strong>
-            n8n, LLM Agents,
-            API / Tool Integration
+            <strong>Containerization:</strong>
+            Docker, Docker Compose, Docker Hub
           </div>
 
           <div>
-            <strong>
-              Engineering:
-            </strong>
-            gprMax, PLAXIS 2D/3D,
-            SLOPE/W
+            <strong>Automation:</strong>
+            n8n, LLM Agents, API Integration
+          </div>
+
+          <div>
+            <strong>Engineering:</strong>
+            gprMax, PLAXIS 2D/3D, SLOPE/W
           </div>
 
         </div>
@@ -1218,9 +834,7 @@
 
   </header>
 
-  <!-- =========================
-       ABOUT
-  ========================== -->
+  <!-- ABOUT -->
 
   <section id="about">
 
@@ -1244,10 +858,9 @@
 
         <p>
 
-          My work progressed from YOLO-based pavement
-          damage detection to 2D GPR cavity detection,
-          multi-view deep learning and deployable
-          AI applications.
+          Progressing from YOLO-based pavement damage detection
+          to 2D GPR research, multi-view deep learning and
+          containerized AI deployment.
 
         </p>
 
@@ -1264,32 +877,28 @@
 
           <p>
 
-            I started working with Computer Vision during
-            my B.Eng. capstone project, developing
-            YOLO-based pavement damage detection models
-            and presenting the project at
+            I started working with Computer Vision during my B.Eng.
+            capstone project by developing YOLO-based pavement damage
+            detection models and presenting the work at
             KMUTT Project Day 2024.
 
           </p>
 
           <p>
 
-            I later continued AI research at the M.Eng.
-            level, focusing on Ground Penetrating Radar
-            (GPR) cavity detection — progressing from
-            2D single-view object detection to
-            multi-view deep learning with TriView-YOLO.
+            I later continued AI research at the M.Eng. level,
+            focusing on Ground Penetrating Radar (GPR) cavity detection
+            and progressing from 2D single-view object detection
+            to multi-view deep learning with TriView-YOLO.
 
           </p>
 
           <p>
 
             My current focus is end-to-end AI development:
-            training and evaluating models,
-            building usable web interfaces,
-            containerizing AI applications and
-            making models portable through
-            reproducible deployment workflows.
+            training and evaluating models, building usable AI applications,
+            containerizing applications using Docker and Docker Compose,
+            and publishing portable AI images through Docker Hub.
 
           </p>
 
@@ -1317,10 +926,8 @@
             </b>
 
             <span>
-              Experiment design,
-              evaluation,
-              comparison and
-              research publication.
+              Training, evaluation,
+              experimental comparison and publications.
             </span>
 
           </div>
@@ -1328,27 +935,25 @@
           <div class="point">
 
             <b>
-              Deployment
+              AI Deployment
             </b>
 
             <span>
-              Gradio, Hugging Face,
+              Gradio and Hugging Face
+              interactive AI applications.
+            </span>
+
+          </div>
+
+          <div class="point">
+
+            <b>
+              Containerization
+            </b>
+
+            <span>
               Docker, Docker Compose
-              and Docker Hub.
-            </span>
-
-          </div>
-
-          <div class="point">
-
-            <b>
-              AI Automation
-            </b>
-
-            <span>
-              n8n multi-agent workflows
-              with tools, memory
-              and APIs.
+              and Docker Hub distribution.
             </span>
 
           </div>
@@ -1359,65 +964,31 @@
 
       <div class="tags">
 
-        <span class="tag">
-          Python
-        </span>
+        <span class="tag">Python</span>
+        <span class="tag">PyTorch</span>
+        <span class="tag">YOLO</span>
+        <span class="tag">OpenCV</span>
+        <span class="tag">NumPy</span>
+        <span class="tag">Pandas</span>
+        <span class="tag">SHAP</span>
+        <span class="tag">Gradio</span>
+        <span class="tag">Hugging Face</span>
 
-        <span class="tag">
-          PyTorch
-        </span>
-
-        <span class="tag">
-          YOLO
-        </span>
-
-        <span class="tag">
-          OpenCV
-        </span>
-
-        <span class="tag">
-          NumPy
-        </span>
-
-        <span class="tag">
-          Pandas
-        </span>
-
-        <span class="tag">
-          SHAP
-        </span>
-
-        <span class="tag">
-          Gradio
-        </span>
-
-        <span class="tag">
-          Hugging Face
-        </span>
-
-        <span class="tag">
+        <span class="tag docker">
           Docker
         </span>
 
-        <span class="tag">
+        <span class="tag docker">
           Docker Compose
         </span>
 
-        <span class="tag">
+        <span class="tag docker">
           Docker Hub
         </span>
 
-        <span class="tag">
-          Git / GitHub
-        </span>
-
-        <span class="tag">
-          gprMax
-        </span>
-
-        <span class="tag">
-          n8n
-        </span>
+        <span class="tag">Git / GitHub</span>
+        <span class="tag">gprMax</span>
+        <span class="tag">n8n</span>
 
       </div>
 
@@ -1425,9 +996,7 @@
 
   </section>
 
-  <!-- =========================
-       RESEARCH
-  ========================== -->
+  <!-- RESEARCH -->
 
   <section id="research">
 
@@ -1450,9 +1019,8 @@
 
         <p>
 
-          A continuous progression from undergraduate
-          computer vision to published GPR research
-          and containerized AI deployment.
+          Research progression from undergraduate computer vision
+          to published GPR research and deployable AI applications.
 
         </p>
 
@@ -1460,9 +1028,7 @@
 
       <div class="timeline">
 
-        <!-- =====================
-             PROJECT 00
-        ====================== -->
+        <!-- 00 -->
 
         <article class="project">
 
@@ -1478,8 +1044,7 @@
               </div>
 
               <h3>
-                Pavement Damage Detection
-                with YOLO
+                Pavement Damage Detection with YOLO
               </h3>
 
               <div class="meta">
@@ -1495,39 +1060,18 @@
             <div class="metrics">
 
               <div class="metric">
-
-                <b>
-                  0.598
-                </b>
-
-                <span>
-                  Best mAP
-                </span>
-
+                <b>0.598</b>
+                <span>Best mAP</span>
               </div>
 
               <div class="metric">
-
-                <b>
-                  0.566
-                </b>
-
-                <span>
-                  Best F1
-                </span>
-
+                <b>0.566</b>
+                <span>Best F1</span>
               </div>
 
               <div class="metric">
-
-                <b>
-                  6,400
-                </b>
-
-                <span>
-                  Images
-                </span>
-
+                <b>6,400</b>
+                <span>Images</span>
               </div>
 
             </div>
@@ -1536,31 +1080,20 @@
 
           <p>
 
-            Developed and evaluated YOLO-based pavement
-            damage detection models across 10 damage classes.
-            The study compared YOLOv8 and YOLOv9 configurations
-            using an international pavement-image dataset
-            and was presented at KMUTT Project Day 2024.
+            Developed and evaluated YOLO-based pavement damage
+            detection models across 10 damage categories.
+            Compared YOLOv8 and YOLOv9 configurations using an
+            international pavement-image dataset and presented
+            the work at KMUTT Project Day 2024.
 
           </p>
 
           <div class="tags">
 
-            <span class="tag">
-              YOLOv8
-            </span>
-
-            <span class="tag">
-              YOLOv9
-            </span>
-
-            <span class="tag">
-              Computer Vision
-            </span>
-
-            <span class="tag">
-              Object Detection
-            </span>
+            <span class="tag">YOLOv8</span>
+            <span class="tag">YOLOv9</span>
+            <span class="tag">Computer Vision</span>
+            <span class="tag">Object Detection</span>
 
           </div>
 
@@ -1568,7 +1101,7 @@
 
             <a
               class="btn"
-              href="./Poster%20Project%20Day.pdf"
+              href="./project-day-2024-poster.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -1583,9 +1116,7 @@
           ↓
         </div>
 
-        <!-- =====================
-             PROJECT 01
-        ====================== -->
+        <!-- 01 -->
 
         <article class="project">
 
@@ -1618,39 +1149,18 @@
             <div class="metrics">
 
               <div class="metric">
-
-                <b>
-                  0.581
-                </b>
-
-                <span>
-                  mAP@0.5
-                </span>
-
+                <b>0.581</b>
+                <span>mAP@0.5</span>
               </div>
 
               <div class="metric">
-
-                <b>
-                  0.820
-                </b>
-
-                <span>
-                  Precision
-                </span>
-
+                <b>0.820</b>
+                <span>Precision</span>
               </div>
 
               <div class="metric">
-
-                <b>
-                  0.594
-                </b>
-
-                <span>
-                  F1-score
-                </span>
-
+                <b>0.594</b>
+                <span>F1-score</span>
               </div>
 
             </div>
@@ -1659,35 +1169,21 @@
 
           <p>
 
-            Developed a 2D single-view GPR cavity detection
+            Developed a single-view 2D GPR cavity detection
             pipeline using YOLO-based object detection.
-            Compared multiple model configurations using field
-            and simulated GPR data, including synthetic data
-            generated with gprMax.
+            Compared multiple deep-learning configurations
+            using field data and simulated GPR data generated
+            with gprMax.
 
           </p>
 
           <div class="tags">
 
-            <span class="tag">
-              Python
-            </span>
-
-            <span class="tag">
-              PyTorch
-            </span>
-
-            <span class="tag">
-              YOLO
-            </span>
-
-            <span class="tag">
-              GPR
-            </span>
-
-            <span class="tag">
-              gprMax
-            </span>
+            <span class="tag">Python</span>
+            <span class="tag">PyTorch</span>
+            <span class="tag">YOLO</span>
+            <span class="tag">GPR</span>
+            <span class="tag">gprMax</span>
 
           </div>
 
@@ -1737,9 +1233,7 @@
           ↓
         </div>
 
-        <!-- =====================
-             PROJECT 02
-        ====================== -->
+        <!-- 02 -->
 
         <article class="project">
 
@@ -1758,8 +1252,7 @@
 
               <h3>
                 TriView-YOLO —
-                Multi-View GPR
-                Cavity Detection
+                Multi-View GPR Cavity Detection
               </h3>
 
               <div class="meta">
@@ -1775,39 +1268,18 @@
             <div class="metrics">
 
               <div class="metric">
-
-                <b>
-                  0.558
-                </b>
-
-                <span>
-                  mAP50
-                </span>
-
+                <b>0.558</b>
+                <span>mAP50</span>
               </div>
 
               <div class="metric">
-
-                <b>
-                  0.629
-                </b>
-
-                <span>
-                  Recall
-                </span>
-
+                <b>0.629</b>
+                <span>Recall</span>
               </div>
 
               <div class="metric">
-
-                <b>
-                  23.6
-                </b>
-
-                <span>
-                  GFLOPs
-                </span>
-
+                <b>23.6</b>
+                <span>GFLOPs</span>
               </div>
 
             </div>
@@ -1817,34 +1289,20 @@
           <p>
 
             Developed TriView-YOLO, an early-fusion framework
-            combining longitudinal B-scan,
-            horizontal C-scan and cross-section B-scan information
-            through a multi-view input architecture
-            for automated GPR cavity detection.
+            combining longitudinal B-scan, horizontal C-scan
+            and cross-section B-scan information through a
+            multi-view input architecture for automated
+            GPR cavity detection.
 
           </p>
 
           <div class="tags">
 
-            <span class="tag">
-              PyTorch
-            </span>
-
-            <span class="tag">
-              YOLO
-            </span>
-
-            <span class="tag">
-              Multi-View Learning
-            </span>
-
-            <span class="tag">
-              Early Fusion
-            </span>
-
-            <span class="tag">
-              GPR
-            </span>
+            <span class="tag">PyTorch</span>
+            <span class="tag">YOLO</span>
+            <span class="tag">Multi-View Learning</span>
+            <span class="tag">Early Fusion</span>
+            <span class="tag">GPR</span>
 
           </div>
 
@@ -1885,11 +1343,9 @@
           ↓
         </div>
 
-        <!-- =====================
-             PROJECT 03
-        ====================== -->
+        <!-- 03 -->
 
-        <article class="project">
+        <article class="project docker-highlight">
 
           <div class="project-top">
 
@@ -1907,9 +1363,7 @@
 
               <div class="meta">
 
-                Interactive Inference ·
-                Dockerized Application ·
-                Portable Deployment
+                Gradio · Docker · Docker Compose · Docker Hub
 
               </div>
 
@@ -1918,39 +1372,18 @@
             <div class="metrics">
 
               <div class="metric">
-
-                <b>
-                  2D / 3D
-                </b>
-
-                <span>
-                  Input Modes
-                </span>
-
+                <b>2D / 3D</b>
+                <span>Input Modes</span>
               </div>
 
               <div class="metric">
-
-                <b>
-                  Docker
-                </b>
-
-                <span>
-                  Containerized
-                </span>
-
+                <b>Docker</b>
+                <span>Containerized</span>
               </div>
 
               <div class="metric">
-
-                <b>
-                  Public
-                </b>
-
-                <span>
-                  Docker Hub Image
-                </span>
-
+                <b>Public</b>
+                <span>Docker Hub Image</span>
               </div>
 
             </div>
@@ -1960,43 +1393,41 @@
           <p>
 
             Built an interactive GPR cavity detection application
-            for model inference, visualization and report generation.
+            for AI inference, visualization and report generation.
 
-            Containerized the complete application with Docker
-            and Docker Compose, packaged trained model weights
-            for standalone inference, published the deployable image
-            to Docker Hub, and verified that the public image
-            can be pulled and run independently.
+            Containerized the application using
+            <strong>Docker and Docker Compose</strong>,
+            packaged trained model weights inside the image
+            for standalone inference, and published the
+            deployable container image to
+            <strong>Docker Hub</strong>.
+
+          </p>
+
+          <p>
+
+            Verified that the public Docker image can be pulled
+            and executed independently without requiring the original
+            Python development environment or local model files.
 
           </p>
 
           <div class="tags">
 
-            <span class="tag">
-              Python
-            </span>
+            <span class="tag">Python</span>
+            <span class="tag">PyTorch</span>
+            <span class="tag">YOLO</span>
+            <span class="tag">Gradio</span>
 
-            <span class="tag">
-              PyTorch
-            </span>
-
-            <span class="tag">
-              YOLO
-            </span>
-
-            <span class="tag">
-              Gradio
-            </span>
-
-            <span class="tag">
+            <span class="tag docker">
               Docker
             </span>
 
-            <span class="tag">
+            <span class="tag docker">
               Docker Compose
             </span>
 
-            <span class="tag">
+            <span class="tag docker">
               Docker Hub
             </span>
 
@@ -2023,26 +1454,24 @@
             </a>
 
             <a
-              class="btn primary"
+              class="btn yellow"
               href="https://hub.docker.com/r/suphawut725/gpr-detector"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Docker Image ↗
+              View Docker Image ↗
             </a>
 
           </div>
 
-          <div class="docker-box">
+          <div class="docker-command">
 
             <strong>
               Run from Docker Hub
             </strong>
 
-            <br>
-            <br>
-
             <code>docker pull suphawut725/gpr-detector:latest
+
 docker run --rm -p 7860:7860 suphawut725/gpr-detector:latest</code>
 
           </div>
@@ -2055,9 +1484,157 @@ docker run --rm -p 7860:7860 suphawut725/gpr-detector:latest</code>
 
   </section>
 
-  <!-- =========================
-       ADDITIONAL APPLICATIONS
-  ========================== -->
+  <!-- DEPLOYMENT -->
+
+  <section id="deployment">
+
+    <div class="container">
+
+      <div class="section-head">
+
+        <div>
+
+          <div class="eyebrow">
+            AI Deployment
+          </div>
+
+          <h2>
+            From Model to Deployable Application
+          </h2>
+
+        </div>
+
+        <p>
+
+          The GPR AI application is packaged as a portable
+          containerized application and distributed through
+          Docker Hub.
+
+        </p>
+
+      </div>
+
+      <div class="deployment-grid">
+
+        <div class="deployment-card">
+
+          <div class="deployment-icon">
+            🧠
+          </div>
+
+          <h3>
+            AI Application
+          </h3>
+
+          <p>
+
+            YOLO-based GPR cavity detection with
+            interactive Gradio inference,
+            visualization and report generation.
+
+          </p>
+
+          <div class="tags">
+
+            <span class="tag">PyTorch</span>
+            <span class="tag">YOLO</span>
+            <span class="tag">Gradio</span>
+
+          </div>
+
+        </div>
+
+        <div class="deployment-card docker-highlight">
+
+          <div class="deployment-icon">
+            🐳
+          </div>
+
+          <h3>
+            Docker + Docker Compose
+          </h3>
+
+          <p>
+
+            Containerized application dependencies,
+            Python environment and trained model weights
+            into a reproducible standalone Docker image.
+
+          </p>
+
+          <div class="tags">
+
+            <span class="tag docker">
+              Docker
+            </span>
+
+            <span class="tag docker">
+              Docker Compose
+            </span>
+
+          </div>
+
+        </div>
+
+        <div class="deployment-card">
+
+          <div class="deployment-icon">
+            📦
+          </div>
+
+          <h3>
+            Docker Hub Distribution
+          </h3>
+
+          <p>
+
+            Published the deployable GPR AI image
+            to Docker Hub so the application can be
+            pulled and executed on another Docker-enabled machine.
+
+          </p>
+
+          <div class="actions">
+
+            <a
+              class="btn yellow"
+              href="https://hub.docker.com/r/suphawut725/gpr-detector"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Docker Hub ↗
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="docker-command">
+
+        <strong>
+          Public Docker Image
+        </strong>
+
+        <code>suphawut725/gpr-detector:latest
+
+
+docker pull suphawut725/gpr-detector:latest
+
+docker run --rm -p 7860:7860 suphawut725/gpr-detector:latest
+
+
+Open in browser:
+http://localhost:7860</code>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- APPLICATIONS -->
 
   <section id="applications">
 
@@ -2079,9 +1656,9 @@ docker run --rm -p 7860:7860 suphawut725/gpr-detector:latest</code>
 
         <p>
 
-          Projects combining AI models with
-          usable interfaces, explainability
-          and automation.
+          AI projects combining model development,
+          interactive applications, explainability
+          and workflow automation.
 
         </p>
 
@@ -2089,37 +1666,25 @@ docker run --rm -p 7860:7860 suphawut725/gpr-detector:latest</code>
 
       <div class="apps">
 
-        <!-- PAVEMENT APP -->
-
         <article class="app-card">
 
           <h3>
-            AI-Powered Pavement
-            Crack Detection
+            AI-Powered Pavement Crack Detection
           </h3>
 
           <p>
 
             Browser-based YOLO pavement-damage
-            detection application supporting
-            image upload, inference and
-            visualized detections.
+            detection application supporting image upload,
+            inference and detection visualization.
 
           </p>
 
           <div class="tags">
 
-            <span class="tag">
-              YOLO
-            </span>
-
-            <span class="tag">
-              OpenCV
-            </span>
-
-            <span class="tag">
-              Hugging Face
-            </span>
+            <span class="tag">YOLO</span>
+            <span class="tag">OpenCV</span>
+            <span class="tag">Hugging Face</span>
 
           </div>
 
@@ -2138,42 +1703,27 @@ docker run --rm -p 7860:7860 suphawut725/gpr-detector:latest</code>
 
         </article>
 
-        <!-- OMC MDD -->
-
         <article class="app-card">
 
           <h3>
-            Soil Compaction
-            OMC & MDD Estimator
+            Soil Compaction OMC & MDD Estimator
           </h3>
 
           <p>
 
-            Interactive engineering application
-            for estimating OMC and MDD,
-            fitting compaction curves,
-            visualizing results and explaining
-            model contributions with SHAP.
+            Interactive engineering application for
+            estimating OMC and MDD, fitting compaction curves,
+            visualizing results and explaining predictions
+            using SHAP.
 
           </p>
 
           <div class="tags">
 
-            <span class="tag">
-              Python
-            </span>
-
-            <span class="tag">
-              SHAP
-            </span>
-
-            <span class="tag">
-              NumPy
-            </span>
-
-            <span class="tag">
-              Pandas
-            </span>
+            <span class="tag">Python</span>
+            <span class="tag">SHAP</span>
+            <span class="tag">NumPy</span>
+            <span class="tag">Pandas</span>
 
           </div>
 
@@ -2192,44 +1742,28 @@ docker run --rm -p 7860:7860 suphawut725/gpr-detector:latest</code>
 
         </article>
 
-        <!-- N8N -->
-
         <article class="app-card">
 
           <h3>
-            Multi-Agent AI
-            Workflow Automation
+            Multi-Agent AI Workflow Automation
           </h3>
 
           <p>
 
-            n8n-based multi-agent workflow
-            integrating LLMs, memory,
+            n8n-based workflow integrating
+            multiple LLM agents, memory,
             search, calculation tools,
             OpenRouter, SerpAPI,
-            Wikipedia, Gmail and
-            Google Calendar with automated
-            branching and actions.
+            Wikipedia, Gmail and Google Calendar.
 
           </p>
 
           <div class="tags">
 
-            <span class="tag">
-              n8n
-            </span>
-
-            <span class="tag">
-              LLM Agents
-            </span>
-
-            <span class="tag">
-              OpenRouter
-            </span>
-
-            <span class="tag">
-              API Integration
-            </span>
+            <span class="tag">n8n</span>
+            <span class="tag">LLM Agents</span>
+            <span class="tag">OpenRouter</span>
+            <span class="tag">API Integration</span>
 
           </div>
 
@@ -2241,9 +1775,7 @@ docker run --rm -p 7860:7860 suphawut725/gpr-detector:latest</code>
 
   </section>
 
-  <!-- =========================
-       PUBLICATIONS
-  ========================== -->
+  <!-- PUBLICATIONS -->
 
   <section id="publications">
 
@@ -2265,13 +1797,10 @@ docker run --rm -p 7860:7860 suphawut725/gpr-detector:latest</code>
 
       </div>
 
-      <!-- ARXIV -->
-
       <div class="publication">
 
         <strong>
-          Thawinutchokaudom, S.,
-          et al. (2026).
+          Thawinutchokaudom, S., et al. (2026).
         </strong>
 
         <p>
@@ -2279,9 +1808,8 @@ docker run --rm -p 7860:7860 suphawut725/gpr-detector:latest</code>
           <em>
             TriView-YOLO:
             Early Multi-View Fusion for
-            Ground Penetrating Radar
-            Cavity Detection in Soft,
-            High-Water-Content Soils.
+            Ground Penetrating Radar Cavity Detection
+            in Soft, High-Water-Content Soils.
           </em>
 
           arXiv Preprint, 2026.
@@ -2303,8 +1831,6 @@ docker run --rm -p 7860:7860 suphawut725/gpr-detector:latest</code>
 
       </div>
 
-      <!-- NCCE -->
-
       <div class="publication">
 
         <strong>
@@ -2319,16 +1845,14 @@ docker run --rm -p 7860:7860 suphawut725/gpr-detector:latest</code>
         <p>
 
           <em>
-
             Machine Learning-Enhanced
             Ground Penetrating Radar Analysis
             for Subsurface Cavity Detection.
-
           </em>
 
           The 31st National Convention
-          on Civil Engineering
-          (NCCE31), GTE-61.
+          on Civil Engineering,
+          GTE-61.
 
         </p>
 
@@ -2351,9 +1875,7 @@ docker run --rm -p 7860:7860 suphawut725/gpr-detector:latest</code>
 
   </section>
 
-  <!-- =========================
-       EDUCATION
-  ========================== -->
+  <!-- EDUCATION -->
 
   <section id="education">
 
@@ -2377,8 +1899,6 @@ docker run --rm -p 7860:7860 suphawut725/gpr-detector:latest</code>
 
       <div class="education-grid">
 
-        <!-- MASTER -->
-
         <div class="education-card">
 
           <h3>
@@ -2392,9 +1912,11 @@ docker run --rm -p 7860:7860 suphawut725/gpr-detector:latest</code>
           <p>
 
             <strong>
+
               King Mongkut's University
               of Technology Thonburi
               (KMUTT)
+
             </strong>
 
             <br>
@@ -2414,8 +1936,6 @@ docker run --rm -p 7860:7860 suphawut725/gpr-detector:latest</code>
           </p>
 
         </div>
-
-        <!-- BACHELOR -->
 
         <div class="education-card">
 
@@ -2446,8 +1966,7 @@ docker run --rm -p 7860:7860 suphawut725/gpr-detector:latest</code>
           <p>
 
             Capstone focus:
-            YOLO-based pavement
-            damage detection.
+            YOLO-based pavement damage detection.
 
           </p>
 
@@ -2459,9 +1978,7 @@ docker run --rm -p 7860:7860 suphawut725/gpr-detector:latest</code>
 
   </section>
 
-  <!-- =========================
-       CONTACT
-  ========================== -->
+  <!-- CONTACT -->
 
   <section
     class="contact"
@@ -2479,18 +1996,15 @@ docker run --rm -p 7860:7860 suphawut725/gpr-detector:latest</code>
         <h2>
 
           Open to AI /
-          Machine Learning
-          Engineering Opportunities
+          Machine Learning Engineering Opportunities
 
         </h2>
 
         <p>
 
-          Interested in computer vision,
-          deep learning,
-          AI deployment and
-          engineering-focused
-          AI applications.
+          Computer Vision · Deep Learning ·
+          AI Deployment · Docker ·
+          Engineering AI Applications
 
         </p>
 
@@ -2525,7 +2039,7 @@ docker run --rm -p 7860:7860 suphawut725/gpr-detector:latest</code>
           </a>
 
           <a
-            class="btn"
+            class="btn yellow"
             href="https://hub.docker.com/r/suphawut725/gpr-detector"
             target="_blank"
             rel="noopener noreferrer"
@@ -2541,9 +2055,7 @@ docker run --rm -p 7860:7860 suphawut725/gpr-detector:latest</code>
 
   </section>
 
-  <!-- =========================
-       FOOTER
-  ========================== -->
+  <!-- FOOTER -->
 
   <footer>
 
